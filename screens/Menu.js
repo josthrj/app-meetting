@@ -22,7 +22,7 @@ const Menu = () => {
                     name="Fornecedores"
                     component={ListaFornecedor}
                     options={{
-                        tabBarLabel: "Fornecedores",
+                        tabBarLabel: "Lista de Fornecedores",
                         tabBarIcon: () => (
                             <MaterialCommunityIcons name="view-list" color="#000" size={24} />
                         )
