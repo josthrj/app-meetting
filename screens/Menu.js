@@ -4,7 +4,6 @@ import { useTheme } from "react-native-paper";
 import { StyleSheet } from "react-native";
 
 import {ListaFornecedor} from "./ListaFornecedor";
-import {ListaProduto} from "./ListaProduto";
 import NovoFornecedor from "./NovoFornecedor";
 
 const Tab = createMaterialBottomTabNavigator();
