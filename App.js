@@ -13,7 +13,7 @@ export default function App() {
         name='Menu'
         component={Menu}
         options={{
-          title: "MEETTING",
+          title: "MEETTING APP",
           headerTitleAlign: "center",
 
     
