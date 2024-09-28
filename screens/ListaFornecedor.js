@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
 
-const ListaFornecedores = ({ fornecedores }) => {
+const ListaFornecedores = ({ ListaFornecedores }) => {
   return (
     <View style={styles.listaContainer}>
       <Text style={styles.listaTitle}>Lista de Proveedores</Text>
