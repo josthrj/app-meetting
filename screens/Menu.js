@@ -1,5 +1,5 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { MaterialCommunityIcons } from "react-native-vector-icons/MaterialCommunityIcons";
+import  MaterialCommunityIcons  from "react-native-vector-icons/MaterialCommunityIcons";
 import { useTheme } from "react-native-paper";
 import { StyleSheet } from "react-native";
 
