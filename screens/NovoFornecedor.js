@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {StyleSheet, View,TextInput,TouchableOpacity,Text,Image,ScrollView,} from "react-native";
-import ListaFornecedor from "./ListaFornecedor"; // Importamos el componente Fornecedores
+import ListaFornecedores from "./ListaFornecedor"; // Importamos el componente Fornecedores
 
 function NovoFornecedor() {
     const [newFornecedor, setNewFornecedor] = useState("");
