@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
 
-const ListaFornecedores = ({ ListaFornecedores }) => {
+const ListaFornecedores = ({ fornecedores }) => {
   return (
     <View style={styles.listaContainer}>
       <Text style={styles.listaTitle}>Lista de Proveedores</Text>
       <FlatList
-        data={fornecedores}
+        data={fornecedores} // Se corrige el nombre de la prop
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <View style={styles.listaItem}>
