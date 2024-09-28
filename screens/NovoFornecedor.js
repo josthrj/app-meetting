@@ -6,7 +6,7 @@ const NovoFornecedor = () => {
        <ScrollView>
              <Text>Novo Fornecedor</Text>
              <View>
-                <Text>Novo Fornecedor</Text>
+                <Text>Novo Fornecedor1</Text>
                 <Image
                 source={{
                     uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
