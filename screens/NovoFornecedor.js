@@ -11,6 +11,8 @@ function NovoFornecedor() {
         if (newFornecedor.trim() !== "") {
             setFornecedores([...fornecedores, newFornecedor]);
             setNewFornecedor("");
+            // Navegar al componente ListaFornecedores y pasar la lista actualizada
+           navigation.navigate("ListaFornecedores", { fornecedores });
         }
     };
 
