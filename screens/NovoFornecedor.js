@@ -1,51 +1,47 @@
 import React, { useState } from "react";
-import {StyleSheet, View,TextInput,TouchableOpacity,Text,Image,ScrollView,} from "react-native";
-import ListaFornecedores from "./ListaFornecedor"; // Importamos el componente Fornecedores
+import { StyleSheet, View, TextInput, TouchableOpacity, Text, Image, ScrollView } from "react-native";
 
-function NovoFornecedor() {
-    const [newFornecedor, setNewFornecedor] = useState("");
-    const [fornecedores, setFornecedores] = useState([]);
+function NovoFornecedor({ navigation }) {
+  const [newFornecedor, setNewFornecedor] = useState("");
+  const [fornecedores, setFornecedores] = useState([]);
 
-    // Función para agregar un nuevo proveedor a la lista
-    const addFornecedor = () => {
-        if (newFornecedor.trim() !== "") {
-            setFornecedores([...fornecedores, newFornecedor]);
-            setNewFornecedor("");
-            // Navegar al componente ListaFornecedores y pasar la lista actualizada
-           navigation.navigate("ListaFornecedores", { fornecedores });
-        }
-    };
+  // Función para agregar un nuevo proveedor a la lista
+  const addFornecedor = () => {
+    if (newFornecedor.trim() !== "") {
+      setFornecedores([...fornecedores, newFornecedor]);
+      setNewFornecedor("");
+      // Navegar al componente ListaFornecedores y pasar la lista actualizada
+      navigation.navigate("ListaFornecedores", { fornecedores });
+    }
+  };
 
-    return (
-        <ScrollView style={styles.container}>
-            <View style={styles.titleContainer}>
-                <Text style={styles.title}>Novo Fornecedor</Text>
-            </View>
+  return (
+    <ScrollView style={styles.container}>
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>Novo Fornecedor</Text>
+      </View>
 
-            <View style={styles.form}>
-                <View>
-                    <Image
-                        source={{
-                            uri: "https://reactnative.dev/docs/assets/p_cat2.png",
-                        }}
-                        style={{ width: 200, height: 200 }} />
-                </View>
+      <View style={styles.form}>
+        <View>
+          <Image
+            source={{ uri: "https://reactnative.dev/docs/assets/p_cat2.png" }}
+            style={{ width: 200, height: 200 }}
+          />
+        </View>
 
-                <TextInput
-                    style={styles.inputGroup}
-                    placeholder=""
-                    value={newFornecedor}
-                    onChangeText={setNewFornecedor} />
+        <TextInput
+          style={styles.inputGroup}
+          placeholder="Novo Fornecedor"
+          value={newFornecedor}
+          onChangeText={setNewFornecedor}
+        />
 
-                <TouchableOpacity style={styles.button} onPress={addFornecedor}>
-                    <Text style={styles.textButton}>Salvar</Text>
-                </TouchableOpacity>
-            </View>
-
-            {/* Pasamos la lista de proveedores al componente ListaFornecedores */}
-            <ListaFornecedores fornecedores={fornecedores} />
-        </ScrollView>
-    );
+        <TouchableOpacity style={styles.button} onPress={addFornecedor}>
+          <Text style={styles.textButton}>Salvar</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
+  );
 }
 
 const styles = StyleSheet.create({
