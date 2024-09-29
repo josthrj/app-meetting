@@ -1,12 +1,10 @@
 import React from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
 
-const ListaFornecedores = ({ route }) => {
-  const { fornecedores } = route.params; // Recibe la lista de proveedores desde la navegación
-
+const ListaFornecedores = ({ fornecedores }) => { // Asegúrate de recibir fornecedores
   return (
     <View style={styles.listaContainer}>
-      <Text style={styles.listaTitle}>Lista Fornecedores</Text>
+      <Text style={styles.listaTitle}>Lista de Fornecedores</Text>
       <FlatList
         data={fornecedores}
         keyExtractor={(item, index) => index.toString()}

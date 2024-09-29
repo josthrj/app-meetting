@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import { StyleSheet, View, TextInput, TouchableOpacity, Text, Image, ScrollView } from "react-native";
 
-function NovoFornecedor({ navigation }) {
+function NovoFornecedor({ addFornecedor }) { // Recibe la función addFornecedor
   const [newFornecedor, setNewFornecedor] = useState("");
-  const [fornecedores, setFornecedores] = useState([]);
 
-  // Función para agregar un nuevo proveedor a la lista
-  const addFornecedor = () => {
+  // Función para agregar un nuevo fornecedor a la lista
+  const handleAddFornecedor = () => {
     if (newFornecedor.trim() !== "") {
-      setFornecedores([...fornecedores, newFornecedor]);
+      addFornecedor(newFornecedor); // Usa la función pasada por props
       setNewFornecedor("");
-      // Navegar al componente ListaFornecedores y pasar la lista actualizada
-      navigation.navigate("ListaFornecedores", { fornecedores });
     }
   };
 
@@ -31,12 +28,12 @@ function NovoFornecedor({ navigation }) {
 
         <TextInput
           style={styles.inputGroup}
-          placeholder="Novo Fornecedor"
+          placeholder="Ingrese un proveedor"
           value={newFornecedor}
           onChangeText={setNewFornecedor}
         />
 
-        <TouchableOpacity style={styles.button} onPress={addFornecedor}>
+        <TouchableOpacity style={styles.button} onPress={handleAddFornecedor}>
           <Text style={styles.textButton}>Salvar</Text>
         </TouchableOpacity>
       </View>
