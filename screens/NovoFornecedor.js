@@ -21,14 +21,14 @@ function NovoFornecedor({ addFornecedor }) { // Recibe la función addFornecedor
       <View style={styles.form}>
         <View>
           <Image
-            source={{ uri: "https://reactnative.dev/docs/assets/p_cat2.png" }}
+            source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
             style={{ width: 200, height: 200 }}
           />
         </View>
 
         <TextInput
           style={styles.inputGroup}
-          placeholder="Ingrese un proveedor"
+          placeholder="Ingrese uma Descrição"
           value={newFornecedor}
           onChangeText={setNewFornecedor}
         />
